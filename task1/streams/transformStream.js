@@ -4,7 +4,6 @@ const chalk = require('chalk');
 
 function transformStream(action, shift) {
   return new Transform({
-
     transform(chunk, encoding, callback) {
       if (action === 'encode') {
         this.push(caesarCipher.encode(chunk.toString('utf-8'), shift));
