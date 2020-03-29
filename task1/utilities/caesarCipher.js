@@ -8,7 +8,6 @@ const data = {
 };
 
 function encode(text, shift) {
-
   function transformedLetter(letter, correction) {
     return String.fromCharCode(
       ((letter + +shift - correction) % data.letterAmount) + correction
@@ -16,7 +15,7 @@ function encode(text, shift) {
   }
 
   for (let i = 0; i < text.length; i++) {
-    let letter = text.charCodeAt(i);
+    const letter = text.charCodeAt(i);
     if (letter >= data.minUpCharValue && letter <= data.maxLowCharValue) {
       if (letter >= data.minUpCharValue && letter <= data.maxUpCharValue) {
         data.result += transformedLetter(letter, data.minUpCharValue);
