@@ -4,36 +4,31 @@ const usersService = require('./user.service');
 
 router.route('/').get(async (req, res) => {
   const users = await usersService.getAll();
-  // map user fields to exclude secret fields like "password"
-  res.json(users.map(User.toResponse));
+  await res.json(users.map(User.toResponse));
 });
 
 router.route('/:id').get(async (req, res) => {
-  const user = await usersService.getUsersById(req.params.id);
-  // map user fields to exclude secret fields like "password"
-  res.json(User.toResponse(user));
+  const user = await usersService.getById(req.params.id);
+  await res.json(User.toResponse(user));
 });
 
 router.route('/').post(async (req, res) => {
   const newUser = await usersService.createUser(req.body);
-  // map user fields to exclude secret fields like "password"
-  res.json(User.toResponse(newUser));
+  await res.json(User.toResponse(newUser));
 });
 
 router.route('/:id').put(async (req, res) => {
   const updatedUser = await usersService.updateUser(req.params.id, req.body);
-  // map user fields to exclude secret fields like "password"
-  res.json(User.toResponse(updatedUser));
+  await res.json(User.toResponse(updatedUser));
 });
 
 router.route('/:id').delete(async (req, res) => {
   const deletedUser = await usersService.deleteUser(req.params.id);
-// map user fields to exclude secret fields like "password"
   if (deletedUser) {
-    res.status(204).end();
-  } else {
-    res.status(404).end();
+    res.status(200).end();
   }
+    res.status(404).end();
+
 });
 
 module.exports = router;

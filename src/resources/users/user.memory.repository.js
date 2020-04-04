@@ -34,18 +34,22 @@ const createUser = async (params) => {
   users.push(newUser);
   return newUser;
 };
-const updateUser = async (id, data) =>{
+const updateUser = async (id, data) => {
   const user = users.find(item => item.id === id);
   Object.assign(user, data);
   return user;
 };
-const deleteUser = async (id) =>{
-  const index = users.findIndex(user => user.id === id);
- if(~index){
-   users.splice(index, 1);
-   return true;
- }
- else return false
+const deleteUser = async (id) => {
+  let index;
+  for (let i = 0; i < users.length; i++){
+    if (users[i].id === id){
+      index = users[i].id;
+    }
+  }
+  if (~index) {
+    users.splice(index, 1);
+    return true;
+  } else return false;
 };
 
 
