@@ -29,17 +29,10 @@ const tasks = [
   }
 ];
 
-const getAll = async (params) => {
-  return tasks.filter((task) =>{return task.boardId === params.boardId});
-};
+const getAll = async params =>
+  tasks.filter(task => task.boardId === params.boardId);
 
-const getById = async (params) => {
-  const task = tasks.find((task)=>{return task.id === params.id});
-  if (!task) {
-    return;
-  }
-  return task;
-};
+const getById = async params => tasks.find(task => task.id === params.id);
 
 const createTask = async (params, data) => {
   const { title, order, description, userId, columnId } = data;
@@ -57,26 +50,19 @@ const createTask = async (params, data) => {
 };
 
 const updateTask = async (params, data) => {
-  const task = tasks
-    .filter(task => task.boardId === params.boardId)
-    .find(task => task.id === params.id);
+  const task = tasks.find(task => task.id === params.id);
   if (task) {
-    data.boardId = params.boardId;
-    Object.assign(task, data);
-    return task;}
-  return false;
+    return Object.assign(task, data);
+  }
 };
 
-const deleteTask = async (params) => {
-  const index = tasks.filter(
-    (task) =>
-    {return (task.boardId === params.boardId && task.id === params.id)}
+const deleteTask = async params => {
+  const index = tasks.findIndex(
+    task => task.boardId === params.boardId && task.id === params.id
   );
-  if (index.length) {
-    tasks.splice(index, 1);
-    return true;
-  } else return false;
+  if (index) {
+    return tasks.splice(index, 1);
+  }
 };
 
-
-module.exports = { getAll, getById, createTask, updateTask, deleteTask };
+module.exports = { tasks, getAll, getById, createTask, updateTask, deleteTask };

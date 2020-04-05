@@ -1,4 +1,5 @@
 const User = require('./user.model');
+const { tasks } = require('../tasks/task.memory.repository');
 const users = [
   {
     id: '1',
@@ -23,34 +24,29 @@ const users = [
 const getAll = async () => {
   return users;
 };
-const getUsersById = async (id) => {
-  return users.find((user) => {
-    return user.id === id;
-  });
-};
-const createUser = async (params) => {
-  const { login, name, password } = params;
-  const newUser = new User(login, name, password);
-  users.push(newUser);
-  return newUser;
-};
-const updateUser = async (id, data) => {
-  const user = users.find(item => item.id === id);
-  Object.assign(user, data);
+
+const getUsersById = async id => users.find(user => user.id === id);
+
+const createUser = async params => {
+  const user = new User(params);
+  users.push(user);
   return user;
 };
-const deleteUser = async (id) => {
-  let index;
-  for (let i = 0; i < users.length; i++){
-    if (users[i].id === id){
-      index = users[i].id;
-    }
-  }
-  if (~index) {
-    users.splice(index, 1);
-    return true;
-  } else return false;
-};
 
+const updateUser = async (id, data) =>
+  Object.assign(
+    users.find(item => item.id === id),
+    data
+  );
+
+const deleteUser = async id => {
+  const index = await users.findIndex(user => user.id === id);
+  if (~index) {
+    tasks.forEach(task => {
+      task.userId === id ? (task.userId = null) : null;
+    });
+    return users.splice(index, 1);
+  }
+};
 
 module.exports = { getAll, getUsersById, createUser, updateUser, deleteUser };

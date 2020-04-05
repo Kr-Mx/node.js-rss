@@ -55,11 +55,11 @@ const getAll = async () => {
   return boards;
 };
 
-const getById = async (id) => {
+const getById = async id => {
   return boards.find(board => board.id === id);
 };
 
-const createBoard = async (params) => {
+const createBoard = async params => {
   const board = new Board(params);
   boards.push(board);
   return board;
@@ -67,13 +67,13 @@ const createBoard = async (params) => {
 
 const updateBoard = async (id, data) => {
   const index = boards.findIndex(board => board.id === id);
-  return boards[index] = data;
+  return (boards[index] = data);
 };
 
-const deleteBoard = async (id) => {
+const deleteBoard = async id => {
   const index = boards.findIndex(user => user.id === id);
   if (~index) {
-    for (let ind = 0; ind < tasks.length; ind+=1) {
+    for (let ind = 0; ind < tasks.length; ind += 1) {
       if (tasks[ind].boardId === id) {
         tasks.splice(ind, 1);
         ind--;
