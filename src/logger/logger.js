@@ -1,16 +1,21 @@
 const { createLogger, format, transports } = require('winston');
 const logger = createLogger({
   transports: [
-    new transports.Console(),
     new transports.File({
-      filename: "./logs/error.log",
+      filename: './logs/error.log',
       level: 'error',
-      format: format.json()
+      format: format.printf(
+        info =>
+          `${info.message}`
+      )
     }),
     new transports.File({
-      filename: "./logs/info.log",
+      filename: './logs/info.log',
       level: 'info',
-      format: format.json()
+      format: format.printf(
+        info =>
+          `${info.message}`
+      )
     })
   ]
 });

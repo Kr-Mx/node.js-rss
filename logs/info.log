@@ -1,0 +1,69 @@
+url: /users/1111111111, body: {"name":"string","login":"string","password":"string"}, parameters: {}
+url: /users/1111111111, body: {"name":"string","login":"string","password":"string"}, parameters: {}
+url: /users, body: {}, parameters: {}
+url: /boards, body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}, parameters: {}
+url: /boards, body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}, parameters: {}
+url: /users, body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}, parameters: {}
+url: /users, body: {}, parameters: {}
+url: /users/1, body: {}, parameters: {}
+url: /boards, body: {}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00/tasks, body: {"title":"Autotest task","order":0,"description":"Lorem ipsum","userId":null,"boardId":null,"columnId":null}, parameters: {}
+url: /users/1, body: {}, parameters: {}
+url: /users, body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00/tasks, body: {}, parameters: {}
+url: /boards, body: {}, parameters: {}
+url: /boards/1, body: {}, parameters: {}
+url: /users/a9da6189-535c-43d4-b94f-6e3f224d0f12, body: {}, parameters: {}
+url: /users, body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00/tasks, body: {}, parameters: {}
+url: /boards, body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}, parameters: {}
+url: /users/d44774a4-331f-4b67-9e57-f8666451c759, body: {"name":"Autotest updated TEST_USER","login":"test_user","password":"T35t_P@55w0rd","id":"d44774a4-331f-4b67-9e57-f8666451c759"}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00/tasks/2a165609-5f2b-4fde-b1e9-3460dd1fff30, body: {}, parameters: {}
+url: /boards/d1da4ddd-7664-494c-9aa1-02ceaf40f4e1, body: {}, parameters: {}
+url: /users/d44774a4-331f-4b67-9e57-f8666451c759, body: {}, parameters: {}
+url: /boards, body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00/tasks, body: {"title":"Autotest task","order":0,"description":"Lorem ipsum","userId":null,"boardId":null,"columnId":null}, parameters: {}
+url: /users/d44774a4-331f-4b67-9e57-f8666451c759, body: {}, parameters: {}
+url: /boards/380e0a6d-e375-4ed6-8ade-80af335dc9fc, body: {"id":"380e0a6d-e375-4ed6-8ade-80af335dc9fc","title":"Autotest updated board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00/tasks/c8fbabd6-a3e8-4734-a257-ca7274c21dcf, body: {}, parameters: {}
+url: /users, body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}, parameters: {}
+url: /boards/380e0a6d-e375-4ed6-8ade-80af335dc9fc, body: {}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00/tasks, body: {"title":"Autotest task","order":0,"description":"Lorem ipsum","userId":null,"boardId":null,"columnId":null}, parameters: {}
+url: /users/c0f66c87-d8d8-4c77-83b1-383239ccfbc2, body: {}, parameters: {}
+url: /boards/380e0a6d-e375-4ed6-8ade-80af335dc9fc, body: {}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00/tasks/29d9bcb4-8d0f-40b3-9264-a61e21056337, body: {"id":"29d9bcb4-8d0f-40b3-9264-a61e21056337","title":"Autotest updated task","order":0,"description":"Lorem ipsum","userId":null,"boardId":"77935bef-52eb-442c-bb8e-2cacf7cf9f00","columnId":null}, parameters: {}
+url: /users, body: {"name":"TEST_USER","login":"test_user","password":"T35t_P@55w0rd"}, parameters: {}
+url: /boards, body: {}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00/tasks/29d9bcb4-8d0f-40b3-9264-a61e21056337, body: {}, parameters: {}
+url: /boards, body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}, parameters: {}
+url: /boards/1, body: {}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00/tasks/2a165609-5f2b-4fde-b1e9-3460dd1fff30, body: {}, parameters: {}
+url: /boards/e4f85ad7-6114-4a5d-83be-c2f5126a2577/tasks, body: {"title":"Task #2","order":2,"description":"Lorem ipsum","userId":"8f00b475-a605-4382-9c58-e16ca2c12f10","boardId":"e4f85ad7-6114-4a5d-83be-c2f5126a2577"}, parameters: {}
+url: /boards/e4f85ad7-6114-4a5d-83be-c2f5126a2577/tasks, body: {"title":"Task #1","order":1,"description":"Lorem ipsum","userId":"8f00b475-a605-4382-9c58-e16ca2c12f10","boardId":"e4f85ad7-6114-4a5d-83be-c2f5126a2577"}, parameters: {}
+url: /boards/1, body: {}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00/tasks/2a165609-5f2b-4fde-b1e9-3460dd1fff30, body: {}, parameters: {}
+url: /users/8f00b475-a605-4382-9c58-e16ca2c12f10, body: {}, parameters: {}
+url: /boards, body: {"title":"Autotest board","columns":[{"title":"Backlog","order":1},{"title":"Sprint","order":2}]}, parameters: {}
+url: /boards/2a165609-5f2b-4fde-b1e9-3460dd1fff30/tasks/undefined, body: {}, parameters: {}
+url: /boards/e4f85ad7-6114-4a5d-83be-c2f5126a2577/tasks/9a123e4c-4390-49b0-8972-8a579851bd1b, body: {}, parameters: {}
+url: /boards/77935bef-52eb-442c-bb8e-2cacf7cf9f00, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks, body: {"title":"Task #2","order":2,"description":"Lorem ipsum","boardId":"465931e9-e926-424c-a1a1-58bc841e9319","userId":null,"columnId":null}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks, body: {"title":"Task #3","order":3,"description":"Lorem ipsum","boardId":"465931e9-e926-424c-a1a1-58bc841e9319","userId":null,"columnId":null}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks, body: {"title":"Task #1","order":1,"description":"Lorem ipsum","boardId":"465931e9-e926-424c-a1a1-58bc841e9319","userId":null,"columnId":null}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks, body: {"title":"Task #4","order":4,"description":"Lorem ipsum","boardId":"465931e9-e926-424c-a1a1-58bc841e9319","userId":null,"columnId":null}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks, body: {"title":"Task #5","order":5,"description":"Lorem ipsum","boardId":"465931e9-e926-424c-a1a1-58bc841e9319","userId":null,"columnId":null}, parameters: {}
+url: /boards/e4f85ad7-6114-4a5d-83be-c2f5126a2577/tasks/f1f73ef7-2924-4a55-bceb-4c573f671454, body: {}, parameters: {}
+url: /boards/e4f85ad7-6114-4a5d-83be-c2f5126a2577/tasks/9a123e4c-4390-49b0-8972-8a579851bd1b, body: {}, parameters: {}
+url: /boards/e4f85ad7-6114-4a5d-83be-c2f5126a2577/tasks/f1f73ef7-2924-4a55-bceb-4c573f671454, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks/ba150ca3-6665-4549-b742-58d434ec56d7, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks/8845cd73-1d55-4727-a676-0eab545f6720, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks/f08fa1ca-7c46-43bb-b88f-9f4245724d2c, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks/994e3ad8-a060-469a-98b2-940ca0c07181, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks/9f9994e9-a2b8-46c1-91f9-f1a937311543, body: {}, parameters: {}
+url: /boards/e4f85ad7-6114-4a5d-83be-c2f5126a2577, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks/f08fa1ca-7c46-43bb-b88f-9f4245724d2c, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks/994e3ad8-a060-469a-98b2-940ca0c07181, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks/ba150ca3-6665-4549-b742-58d434ec56d7, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks/8845cd73-1d55-4727-a676-0eab545f6720, body: {}, parameters: {}
+url: /boards/465931e9-e926-424c-a1a1-58bc841e9319/tasks/9f9994e9-a2b8-46c1-91f9-f1a937311543, body: {}, parameters: {}

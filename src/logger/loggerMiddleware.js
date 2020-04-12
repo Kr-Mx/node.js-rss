@@ -7,6 +7,7 @@ const loggerMiddleware = (req, res, next) => {
     )}, parameters: ${JSON.stringify(req.query)}`
   );
   next();
+
 };
 
 module.exports = loggerMiddleware;
