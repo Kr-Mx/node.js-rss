@@ -33,23 +33,13 @@
       "./test/setup.js"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run lint",
-      "git add"
-    ]
-  },
   "dependencies": {
     "cross-env": "6.0.3",
     "dotenv": "8.2.0",
     "express": "4.17.1",
     "swagger-ui-express": "4.1.2",
     "uuid": "3.3.3",
+    "winston": "^3.2.1",
     "yamljs": "0.3.0"
   },
   "devDependencies": {
