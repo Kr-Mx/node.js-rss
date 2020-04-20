@@ -2,6 +2,8 @@ const router = require('express').Router();
 const User = require('./user.db.model');
 const usersService = require('./user.service');
 const { ErrorHandler, handleError } = require('../../logger/loggerErrorHandler');
+const unassignUserFromTasks = require('../tasks/task.service')
+  .unassignUserFromTasks;
 
 router.route('/').get(async (req, res, next) => {
   try {
@@ -63,7 +65,9 @@ router.route('/:id').put(async (req, res, next) => {
 router.route('/:id').delete(async (req, res, next) => {
   try {
     const user = await usersService.deleteUser(req.params.id);
+
     if (user) {
+       await unassignUserFromTasks(req.params.id);
       res.status(200).end();
     } else res.status(404).send('User not found');
   } catch (e) {
