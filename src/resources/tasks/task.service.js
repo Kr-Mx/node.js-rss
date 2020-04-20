@@ -6,12 +6,13 @@ const createTask = data => TaskRepo.createTask(data);
 const updateTask = data => TaskRepo.updateTask(data);
 const deleteTask = (boardId, taskId) => TaskRepo.deleteTask(boardId, taskId);
 const unassignUserFromTasks = userId => TaskRepo.unassignUserFromTasks(userId);
-
+const deleteTasksFromBoard = boardId => TaskRepo.deleteTasksFromBoard(boardId);
 module.exports = {
   getAll,
   getById,
   createTask,
   updateTask,
   deleteTask,
-  unassignUserFromTasks
+  unassignUserFromTasks,
+  deleteTasksFromBoard
 };
