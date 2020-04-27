@@ -10,6 +10,8 @@ const loggerMiddleware = require('./logger/loggerMiddleware');
 const { handleError } = require('./logger/loggerErrorHandler');
 const app = express();
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
+const loginRouter = require('./common/login.router');
+const auth = require('./common/auth');
 
 app.use(express.json());
 
@@ -22,10 +24,10 @@ app.use('/', loggerMiddleware, (req, res, next) => {
   }
   next();
 });
-
-app.use('/users', userRouter);
-app.use('/boards', boardRouter);
-app.use('/boards/:boardId/tasks', taskRouter);
+app.use('/login', loginRouter);
+app.use('/users', auth, userRouter);
+app.use('/boards', auth, boardRouter);
+app.use('/boards/:boardId/tasks', auth, taskRouter);
 
 process.on('unhandledRejection', (reason, promise) => {
   fs.appendFileSync('./logs/error.log', `\n${reason.stack}` );

@@ -5,6 +5,11 @@ const Board = require('../resources/boards/board.db.model');
 const { MONGO_CONNECTION_STRING } = require('./config');
 const Users = [
   new User({
+    name: 'admin',
+    login: 'admin',
+    password: 'admin'
+  }),
+  new User({
     name: 'Max',
     login: 'Maxis',
     password: 'Maxis11'
@@ -101,7 +106,7 @@ const connectToDB = (cb) => {
     db.dropCollection('users');
     db.dropCollection('tasks');
     db.dropCollection('boards');
-    User.insertMany(Users);
+    Users.map(user => User.create(user));
     Task.insertMany(Tasks);
     Board.insertMany(Boards);
     cb();

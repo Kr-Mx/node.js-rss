@@ -1,4 +1,5 @@
 const User = require('./user.db.model');
+const bcrypt = require('bcrypt');
 
 const getAll = async () => {
   return User.find({});
@@ -20,4 +21,10 @@ const deleteUser = async id => {
   return User.deleteOne({ _id: id });
 };
 
-module.exports = { getAll, getUsersById, createUser, updateUser, deleteUser };
+const getUserLogin = async data => {
+  const user = await User.findOne({ login: data.login });
+  const isCompare = await bcrypt.compare(data.password, user.password);
+  return isCompare ? user : {};
+};
+
+module.exports = { getAll, getUsersById, createUser, updateUser, deleteUser, getUserLogin };
